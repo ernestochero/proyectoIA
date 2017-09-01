@@ -1,0 +1,42 @@
+<!-- 
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <h5> <strong> PROYECTO FINAL </strong></h5>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+-->
+
+<ion-content> 
+    <canvas #can id="can" width="280" height="280" style="margin-left:40px; margin-top: 40px; border:2px solid;"
+            (touchstart)="handleStart($event)" (touchmove)="handleMove($event)"></canvas>
+  <ion-grid>
+    <ion-row justify-content-center>
+    </ion-row>
+    <ion-row justify-content-center>
+      <div style="margin-top: 20px;">
+          <button ion-button color="light" (click)="erase()"> Limpiar </button>
+          <button ion-button color="light" (click)="reconocer()"> Reconocer </button>
+      </div>
+    </ion-row>
+    <ion-row justify-content-center style="margin-left:40px; margin-top: 40px;">
+          <ion-col col-6>
+              <ion-row> <strong> Numero </strong> </ion-row>
+              <ion-row> 
+                  <div style="font-size:100px;"  >
+                      <strong> {{numero}} </strong>
+                  </div>
+              </ion-row>
+          </ion-col>
+          <ion-col col-6>
+            <ion-row> <strong> Informacion </strong> </ion-row>  
+            <ion-row> <strong> data : </strong> {{dataLenght}} </ion-row>
+            <ion-row> <strong> pesos 1 2 : </strong> {{w12Lenght}} </ion-row>
+            <ion-row> <strong> bias 2 : </strong> {{bias2Lenght}} </ion-row>
+            <ion-row> <strong> pesos 2 3 : </strong> {{w23Lenght}} </ion-row>
+            <ion-row> <strong> bias 3 : </strong> {{bias3Lenght}} </ion-row>
+          </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
